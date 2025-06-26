@@ -38,10 +38,42 @@ public class MainActivity extends AppCompatActivity {
         String contact = "teepakorn";
         String message = "this is my frist APP";
 
-        Toast.makeText(this,"mwssage form" + contact, Toast.LENGTH_SHORT).show();
+        Toast.makeText(this,"message form" + contact, Toast.LENGTH_SHORT).show();
         Toast.makeText(this, "message is" +message , Toast.LENGTH_SHORT).show();
 
+        String command = "go east";
+        switch (command){
+            case "go east":
+                Log.i("message= ", "player go to east");
+                break;
+            case "go west":
+                Log.i("message= ", "player go to west");
+                break;
+            default:
+                Log.i("massage= ", "Default message");
+                break;
 
+        }
+        Log.i("message :", "In  countUp method ");
+        int x = 0 ;
 
+        while(true){
+            x++;
+            Log.i("x =", "+x");
+            if(x == 3){
+                break;
+            }
+        }
+        String mess = jointhese("method", "are", "cool");
+        Log.i("message=",mess);
+        float area = getAreaCrircle(5f);
+        Log.i("area=", ""+area);
+    }
+
+    String jointhese(String a , String b, String c ){
+        return a+b+c;
+    }
+    float getAreaCrircle(float radius){
+        return 3.14f*radius*radius;
     }
 }
